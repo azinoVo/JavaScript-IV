@@ -53,3 +53,40 @@ class Student extends Person {
         console.log(`${this.name} has begun Sprint Challenge on ${studentSubj}!`);
     }
 }
+
+class ProjectManagers extends Instructor {
+    constructor(pmInfo) {
+        super(pmInfo);
+        this.gradClassName = pmInfo.gradClassName;
+        this.favInstructor = pmInfo.favInstructor;
+    }
+
+    standUp (slackChannel) {
+        console.log(`${this.name} announces to ${slackChannel}, @${slackChannel} standy times!`);
+    }
+
+    debugsCode (studentObj,subject) {
+        console.log(`${this.name} debugs ${studentObj.name}'s code on ${subject}!`);
+    }
+}
+
+// this.name = props.name;
+// this.age = props.age;
+// this.location = props.location;
+// this.gender = props.gender;
+// this.previousBackground = studentInfo.previousBackground;
+// this.className = studentInfo.className;
+// this.favSubjects = studentInfo.favSubjects;
+
+
+const Nguyen = new Student ({
+    name = "Nguyen",
+    age = 24,
+    location = "New Orleans",
+    gender = "M",
+    previousBackground = "Biology/Education",
+    className = "CS19",
+    favSubjects = "HTML/CSS/JS/Biology"
+});
+
+console.log(Nguyen);
