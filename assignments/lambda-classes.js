@@ -10,7 +10,7 @@ class Person {
     }
 
     speak() {
-        `Hello, my name is ${this.name}, and I am from ${this.location}.`;
+        console.log(`Hello, my name is ${this.name}, and I am from ${this.location}.`);
     }
 }
 
@@ -23,7 +23,7 @@ class Instructor extends Person {
     }
 
     demo (subjToday) {
-        `Today, we are learning about ${subjToday}!`;
+        console.log(`Today, we are learning about ${subjToday}!`);
     }
 
     grade (studentObj,subjStudent) {
@@ -78,15 +78,31 @@ class ProjectManagers extends Instructor {
 // this.className = studentInfo.className;
 // this.favSubjects = studentInfo.favSubjects;
 
+//Instructor Traits
+
+// this.specialty = teach.specialty;
+// this.favLanguage = teach.favLanguage;
+// this.catchPhrase = teach.catchPhrase;
+
 
 const Nguyen = new Student ({
-    name = "Nguyen",
-    age = 24,
-    location = "New Orleans",
-    gender = "M",
-    previousBackground = "Biology/Education",
-    className = "CS19",
-    favSubjects = "HTML/CSS/JS/Biology"
+    name:"Nguyen",
+    age:24,
+    location:"New Orleans",
+    gender:"M",
+    previousBackground:"Biology/Education",
+    className:"CS19",
+    favSubjects:"HTML/CSS/JS/Biology"
 });
 
 console.log(Nguyen);
+
+const Josh = new Instructor ({
+    specialty:"HTML/CSS/JS",
+    favLanguage:"JS",
+    catchPhrase:"How it do?"
+})
+
+Josh.demo("CSS");
+Josh.grade(Nguyen,"CSS");
+
